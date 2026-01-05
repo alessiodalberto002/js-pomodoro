@@ -6,18 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
     <title>Timer Pomodoro</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>🍅 Timer Pomodoro</h1>
-        <div class="status" id="status">Lavoro</div>
-        <div class="timer" id="timer">25:00</div>
-        <div class="buttons">
-            <button id="startBtn">Start</button>
-            <button id="pauseBtn" disabled>Pausa</button>
-            <button id="resetBtn">Reset</button>
+
+    <div class="timer-panel active" id="workPanel">
+        <div class="panel-title">Lavoro</div>
+        <div class="timer-display" id="workTimer">25:00</div>
+        <div class="controls">
+            <button id="workStart">Start</button>
+            <button id="workPause" disabled>Pausa</button>
+            <button id="workReset">Reset</button>
+        </div>
+    </div>
+
+    <div class="timer-panel inactive" id="breakPanel">
+        <div class="panel-title">Pausa</div>
+        <div class="timer-display" id="breakTimer">05:00</div>
+        <div class="controls">
+            <button id="breakStart">Start</button>
+            <button id="breakPause" disabled>Pausa</button>
+            <button id="breakReset">Reset</button>
         </div>
     </div>
 
